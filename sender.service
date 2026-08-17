@@ -1,0 +1,19 @@
+[Unit]
+Description=Insider Threat Agent - Event Sender
+After= network.target agent.service
+Wants= agent.service
+
+[Service]
+User= root
+Group = root
+WorkingDiractory=/opt/agent
+ExecStart= /opt/agent/venv/bin/python3 /opt/agent/sender.py 
+Restart= always
+RestartSec = 10s
+Environment=PYTHONBUFFERD=1
+StandardOutput=journal
+StandardError=journal
+TimeoutStopSec=15
+
+[Install]
+WantedBy=multi-user.target 

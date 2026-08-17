@@ -1,0 +1,17 @@
+
+# Create virtual environment first:
+#   python3 -m venv venv
+#   source venv/bin/activate
+#   pip install -r requirements.txt
+
+build==1.4.2
+inotify==0.2.12
+inotify-simple==2.0.1
+packaging==26.0
+psutil==7.2.2
+pyproject_hooks==1.2.0
+pyudev==0.24.4
+pyutil==3.3.6
+PyYAML==6.0.3
+watchdog==6.0.0
+
